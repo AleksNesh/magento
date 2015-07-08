@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Speroteck_TagVideo>
+            <version>0.0.1</version>
+        </Speroteck_TagVideo>
+    </modules>
+
+    <global>
+        <blocks>
+            <Speroteck_tags>
+                <class>Speroteck_TagVideo_Block</class>
+            </Speroteck_tags>
+        </blocks>
+    </global>
+
+    <frontend>
+        <routers>
+            <tab>
+                <use>standard</use>
+                <args>
+                    <module>Speroteck_TagVideo</module>
+                    <frontName>tagvideo</frontName>
+                </args>
+            </tab>
+        </routers>
+        <layout>
+            <updates>
+                <Speroteck_TagVideo>
+                    <file>speroteck_tags.xml</file>
+                </Speroteck_TagVideo>
+            </updates>
+        </layout>
+    </frontend>
+
+</config>

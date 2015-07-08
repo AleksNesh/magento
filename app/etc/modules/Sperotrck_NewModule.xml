@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<config>
+    <modules>
+        <Speroteck_NewModule>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Speroteck_NewModule>
+    </modules>
+</config>

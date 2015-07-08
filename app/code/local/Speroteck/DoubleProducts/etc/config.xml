@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Speroteck_DoubleProducts>
+            <version>0.1.0</version>
+        </Speroteck_DoubleProducts>
+    </modules>
+
+    <global>
+        <models>
+            <doubleProduct>
+                <class>Speroteck_DoubleProducts_Model</class>
+            </doubleProduct>
+
+            <!--<checkout>-->
+                <!--<rewrite>-->
+                    <!--<cart>Speroteck_DoubleProducts_Model_Double</cart>-->
+                <!--</rewrite>-->
+            <!--</checkout>-->
+        </models>
+
+        <!--<events>-->
+            <!--<controller_action_predispatch_checkout_cart_add>-->
+                <!--<observers>-->
+                    <!--<aaa>-->
+                        <!--<type>singleton</type>-->
+                        <!--<class>doubleProduct/observer</class>-->
+                        <!--<method>addToCartRequest</method>-->
+                    <!--</aaa>-->
+                <!--</observers>-->
+            <!--</controller_action_predispatch_checkout_cart_add>-->
+        <!--</events>-->
+
+
+    </global>
+
+    <frontend>
+        <routers>
+            <checkout>
+                <args>
+                    <modules>
+                        <Speroteck_DoubleProducts before="Mage_Checkout">Speroteck_DoubleProducts</Speroteck_DoubleProducts>
+                    </modules>
+                </args>
+            </checkout>
+        </routers>
+    </frontend>
+</config>

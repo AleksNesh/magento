@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Speroteck_ExtNav>
+            <version>0.1.0</version>
+        </Speroteck_ExtNav>
+    </modules>
+    <global>
+        <models>
+            <extnav>
+                <class>Speroteck_ExtNav_Model</class>
+                <resourceModel>extnav_resource</resourceModel>
+            </extnav>
+            <extnav_resource>
+                <class>Speroteck_ExtNav_Model_Resource</class>
+                <entities>
+                    <item>
+                        <table>speroteck_extnav_item</table>
+                    </item>
+                </entities>
+            </extnav_resource>
+        </models>
+        <resources>
+            <extnav_setup>
+                <setup>
+                    <module>Speroteck_ExtNav</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </extnav_setup>
+        </resources>
+    </global>
+</config>

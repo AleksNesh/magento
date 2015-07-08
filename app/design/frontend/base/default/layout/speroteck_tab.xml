@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+
+    <tabs_index_test>
+
+        <reference name="head">
+
+            <block type="core/text" name="google.jquery.cdn">
+                <action method="setText">
+                    <text><![CDATA[
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+                    ]]></text>
+                </action>
+            </block>
+        </reference>
+
+
+        <reference name="content">
+            <block type="Speroteck_tabs/tab" name="speroteck_helloworld_content" template="tabs.phtml" />
+        </reference>
+
+    </tabs_index_test>
+
+    <tabs_index_index>
+        <update handle="tabs_index_test" />
+    </tabs_index_index>
+
+</layout>

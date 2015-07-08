@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Speroteck_Tabs>
+            <version>0.0.1</version>
+        </Speroteck_Tabs>
+    </modules>
+
+    <global>
+        <blocks>
+            <Speroteck_tabs>
+                <class>Speroteck_Tabs_Block</class>
+            </Speroteck_tabs>
+        </blocks>
+    </global>
+
+    <frontend>
+        <routers>
+            <tabs>
+                <use>standard</use>
+                <args>
+                    <module>Speroteck_Tabs</module>
+                    <frontName>tab</frontName>
+                </args>
+            </tabs>
+        </routers>
+        <layout>
+            <updates>
+                <Speroteck_Tabs>
+                    <file>speroteck_tab.xml</file>
+                </Speroteck_Tabs>
+            </updates>
+        </layout>
+    </frontend>
+
+</config>

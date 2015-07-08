@@ -1,0 +1,56 @@
+
+<?php
+    $attributeName = "gender";
+?>
+
+<div id="tabs">
+
+
+
+
+            <ul>
+                <?php foreach($this->getAttributeOptions($attributeName) as $optionName=>$optionValue): ?>
+                <li><a href="#<?php echo $optionName ?>"><?php echo $optionName ?></a></li>
+                <?php endforeach ?>
+
+            </ul>
+
+    <?php foreach($this->getAttributeOptions($attributeName) as $optionName=>$optionValue): ?>
+
+            <div id="<?php echo $optionName ?>">
+
+        <?php foreach($this->getProducts($attributeName, $optionValue) as  $product): ?>
+                    <?php
+                        // $product = Mage::getModel("catalog/product")->load($product->getId());
+                        $image = Mage::helper('catalog/image')->init($product , 'small_image'); //'thumbnail'); // small_image
+                     ?>
+                    <div class="tabs-items">
+                        <img src="<?php echo $product->getSmallImageURL(); ?>" alt="<?php echo $product->getSku() ?>" />
+                        <p><?php echo $product->getName() ?></p>
+                    </div>
+        <?php endforeach ?>
+            </div>
+
+
+    <?php endforeach ?>
+
+
+
+
+</div>
+
+
+<style>
+    .tabs-items{
+        display:inline-block;
+        width:150px;
+        vertical-align: top;
+        padding:10px;
+    }
+</style>
+
+<script>
+    jQuery(function() {
+        jQuery( "#tabs" ).tabs();
+    });
+</script>

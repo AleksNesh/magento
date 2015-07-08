@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+  <config>
+    <modules>
+        <Speroteck_MyPayment>
+            <version>0.1.0</version>
+        </Speroteck_MyPayment>
+    </modules>
+
+    <global>
+
+        <bloks>
+            <mypayment>
+                <class>Speroteck_MyPayment</class>
+            </mypayment>
+        </bloks>
+
+        <models>
+            <mypayment>
+                <class>Speroteck_MyPayment_Model</class>
+            </mypayment>
+        </models>
+
+    </global>
+
+    <default>
+        <payment>
+            <mypayment>
+                <active>0</active>
+                <model>mypayment/paymentMethod</model>
+                <order_status>pending</order_status>
+                <title>My Payment</title>
+                <cctypes>VI,MC</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+            </mypayment>
+        </payment>
+    </default>
+</config>

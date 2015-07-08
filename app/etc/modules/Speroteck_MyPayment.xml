@@ -1,0 +1,12 @@
+<config>
+    <modules>
+        <Speroteck_MyPayment>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Payment/>
+            </depends>
+        </Speroteck_MyPayment>
+    </modules>
+
+</config>

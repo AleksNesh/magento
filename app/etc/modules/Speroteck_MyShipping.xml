@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Speroteck_MyShipping>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Speroteck_MyShipping>
+    </modules>
+</config>

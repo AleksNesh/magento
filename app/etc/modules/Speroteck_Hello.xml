@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Speroteck_Hello>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Speroteck_Hello>
+    </modules>
+</config>
