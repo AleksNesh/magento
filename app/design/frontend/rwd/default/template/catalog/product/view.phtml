@@ -37,7 +37,33 @@
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
-<div class="product-view">
+<!--<div class="product-view">-->
+<!--    <div class="product-collateral toggle-content tabs">-->
+<!--        --><?php //if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
+<!--            <dl id="collateral-tabs" class="collateral-tabs">-->
+<!--                --><?php //foreach ($detailedInfoGroup as $alias => $html):?>
+<!--                    <dt class="tab"><span>--><?php //echo $this->escapeHtml($this->getChildData($alias, 'title')) ?><!--</span></dt>-->
+<!--                    <dd class="tab-container">-->
+<!--                        <div class="tab-content">--><?php //echo $html ?><!--</div>-->
+<!--                    </dd>-->
+<!--                --><?php //endforeach;?>
+<!--            </dl>-->
+<!--        --><?php //endif; ?>
+<!--    </div>-->
+    <div>
+        <?php if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
+            <table style="width:100%;">
+                <?php foreach ($detailedInfoGroup as $alias => $html):?>
+                    <tr style="border: 1px solid #d3d3d3; border-collapse: collapse;text-align: center;">
+                        <td><h2><?php echo $this->escapeHtml($this->getChildData($alias, 'title')) ?></h2></td>
+                        <td>
+                            <div><?php echo $html ?></div>
+                        </td>
+                    </tr>
+                <?php endforeach;?>
+            </table>
+        <?php endif; ?>
+    </div>
     <div class="product-essential">
         <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
             <?php echo $this->getBlockHtml('formkey') ?>
@@ -172,17 +198,6 @@
         </script>
     </div>
 
-    <div class="product-collateral toggle-content tabs">
-        <?php if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
-            <dl id="collateral-tabs" class="collateral-tabs">
-                <?php foreach ($detailedInfoGroup as $alias => $html):?>
-                    <dt class="tab"><span><?php echo $this->escapeHtml($this->getChildData($alias, 'title')) ?></span></dt>
-                    <dd class="tab-container">
-                        <div class="tab-content"><?php echo $html ?></div>
-                    </dd>
-                <?php endforeach;?>
-            </dl>
-        <?php endif; ?>
-    </div>
+
 </div>
 
