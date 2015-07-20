@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Speroteck_SsnField>
+            <version>0.1.0</version>
+        </Speroteck_SsnField>
+    </modules>
+
+
+    <global>
+        <resources>
+            <speroteck_ssn_setup>
+                <setup>
+                    <module>Speroteck_SsnField</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </speroteck_ssn_setup>
+        </resources>
+        <models>
+            <SsnField>
+                <class>Speroteck_SsnField_Model</class>
+            </SsnField>
+        </models>
+
+        <events>
+            <controller_action_predispatch_checkout_onepage_saveBilling>
+                <observers>
+                    <saveSsn>
+                        <type>singleton</type>
+                        <class>SsnField/observer</class>
+                        <method>saveSsn</method>
+                    </saveSsn>
+                </observers>
+            </controller_action_predispatch_checkout_onepage_saveBilling>
+        </events>
+        <events>
+            <checkout_type_onepage_save_order_after>
+                <observers>
+                    <saveSsn>
+                        <type>singleton</type>
+                        <class>SsnField/observer</class>
+                        <method>updateOrder</method>
+                    </saveSsn>
+                </observers>
+            </checkout_type_onepage_save_order_after>
+        </events>
+
+    </global>
+
+</config>

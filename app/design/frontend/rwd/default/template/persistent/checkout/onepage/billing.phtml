@@ -132,7 +132,6 @@
                         </div>
                     </div>
                 </li>
-
                 <?php if(!$this->isCustomerLoggedIn()): ?>
 
         <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
@@ -184,6 +183,14 @@
             <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
         </div>
      </li>
+        <li class="fields">
+            <div class="field">
+                <label for="billing:ssn" class="required"><em>*</em><?php echo $this->__('SSN') ?></label>
+                <div class="input-box">
+                    <input type="text" name="custom[ssn]" value="<?php echo $this->htmlEscape($this->getQuote()->getSsn()) ?>" title="<?php echo $this->__('SSN') ?>" class="input-text required-entry" id="billing:ssn" />
+                </div>
+            </div>
+        </li>
     <?php if ($this->canShip()): ?>
         <li class="control">
             <input type="radio" name="billing[use_for_shipping]" id="billing:use_for_shipping_yes" value="1"<?php if ($this->isUseBillingAddressForShipping()) {?> checked="checked"<?php }?> title="<?php echo  $this->__('Ship to this address') ?>" onclick="$('shipping:same_as_billing').checked = true;" class="radio" /><label for="billing:use_for_shipping_yes"><?php echo  $this->__('Ship to this address') ?></label></li>
