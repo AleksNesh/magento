@@ -5303,7 +5303,7 @@ p.product-name a:hover {
 }
 
 .product-view .sharing-links {
-  float: left;
+  float: right;
 }
 .product-view .sharing-links:after {
   content: '';
@@ -10596,4 +10596,13 @@ div.calendar table td.button {
   background: inherit;
   color: inherit;
   text-transform: none;
+}
+.my-regular-price {
+    color: #39c;
+    font-size: 24px;
+}
+
+.my-sharing {
+    display: inline-block;
+    float: right;
 }
