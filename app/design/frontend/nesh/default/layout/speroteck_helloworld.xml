@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <helloworld_index_index>
+        <reference name="content">
+
+            <block type="speroteck_helloworld/content" name="speroteck_helloworld_content" />
+            <block type="core/template" name="7987987" template="aaa.phtml" />
+            <block type="core/template" name="7" template="aa.phtml" />
+
+        </reference>
+    </helloworld_index_index>
+
+</layout>
